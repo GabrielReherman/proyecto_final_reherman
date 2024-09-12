@@ -1,0 +1,68 @@
+#nosotros {
+	h4 {
+		color: rgb(102, 36, 0);
+		letter-spacing: 4px;
+		padding: 20px;
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+
+	div {
+		text-align: justify;
+	}
+}
+
+#imagenes_nosotros {
+	img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+
+		&:hover {
+			transform: scale(1.5);
+			transition: 0.5s;
+		}
+	}
+}
+
+#staff {
+	h4 {
+		color: rgb(102, 36, 0);
+		letter-spacing: 4px;
+		padding: 20px;
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+
+	.fundadores {
+		display: grid;
+		grid-template-areas: "figura encabezados" "parrafo parrafo";
+		grid-row: 120px auto;
+		grid-template-columns: 120px auto;
+		margin-top: 10px;
+		padding: 10px;
+		background-color: rgb(255, 255, 255);
+		border: 1px solid rgba(102, 36, 0, 0.3);
+
+		figure {
+			grid-area: figura;
+
+			img {
+				width: 100px;
+				height: 100px;
+			}
+		}
+
+		div {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			padding-bottom: 10px;
+		}
+
+		p {
+			grid-area: parrafo;
+			text-align: justify;
+		}
+	}
+}

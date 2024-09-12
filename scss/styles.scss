@@ -1,4 +1,13 @@
+@import "./utilidades/reset";
 @import "./utilidades/variables";
+@import "./estructura/body";
 @import "./estructura/header";
 @import "./estructura/main";
 @import "./estructura/footer";
+@import "./componentes/btn";
+@import "./componentes/filtros";
+@import "./componentes/form";
+@import "./componentes/propiedad";
+@import "./componentes/whatsapp-btn";
+@import "./pages/nosotros";
+@import "./pages/contacto";

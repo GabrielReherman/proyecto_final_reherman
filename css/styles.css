@@ -1,14 +1,25 @@
-
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-.navbar .navbar-toggler {
+body {
+  background-color: rgba(40, 54, 53, 0.1);
+  font-family: "Roboto", sans-serif;
+}
+
+header .navbar .navbar-toggler {
   border: 2px solid rgb(102, 36, 0);
 }
-.navbar .navbar-toggler .navbar-toggler-icon {
+header .navbar .navbar-toggler:not(.collapsed) {
+  box-shadow: 0px 0px 0px 3px rgba(102, 36, 0, 0.9);
+}
+header .navbar .navbar-toggler.collapsed {
+  box-shadow: none;
+}
+header .navbar .navbar-toggler .navbar-toggler-icon {
   background-image: none;
   border: none;
   background-color: transparent;
@@ -18,19 +29,12 @@
   align-items: center;
   justify-content: center;
 }
-.navbar .navbar-toggler .navbar-toggler-icon:before {
+header .navbar .navbar-toggler .navbar-toggler-icon::before {
   content: "☰";
   color: rgb(102, 36, 0);
   font-size: 24px;
 }
-.navbar .navbar-toggler:not(.collapsed) {
-  box-shadow: 0px 0px 0px 3px rgba(102, 36, 0, 0.9);
-}
-.navbar .navbar-toggler.collapsed {
-  box-shadow: none;
-  /*estilo header*/
-}
-.navbar ul li a {
+header .navbar ul li a {
   text-decoration: none;
   display: inline-block;
   color: rgb(102, 36, 0);
@@ -39,18 +43,10 @@
   letter-spacing: 4px;
   text-align: center;
   padding: 10px 30px !important;
-  
 }
-.navbar ul li a:hover {
-  
+header .navbar ul li a:hover {
   color: rgba(4, 54, 11, 0.966);
   transform: scale(1.3);
-}
-
-
-body {
-  background-color: rgba(40, 54, 53, 0.1);
-  font-family: "Roboto", sans-serif;
 }
 
 main {
@@ -58,11 +54,10 @@ main {
   text-align: center;
   padding: 0;
   border: 0;
-  
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  background-attachment: fixed; 
-  background-position: center; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 main #imagenIndex {
   position: relative;
@@ -86,25 +81,20 @@ main #propiedades_destacadas {
   text-align: center;
 }
 main #propiedades_destacadas h2 {
-  text-align: center;
   color: rgb(102, 36, 0);
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   letter-spacing: 8px;
   font-size: 1.5rem;
   font-weight: bold;
 }
 main #propiedades_destacadas h3 {
-  text-align: center;
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin: 12px 0;
   letter-spacing: 8px;
   font-size: 1.2rem;
 }
 main #propiedades_destacadas p {
   text-align: justify;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 10px;
 }
 main #propiedades_destacadas a {
   display: inline-block;
@@ -112,7 +102,7 @@ main #propiedades_destacadas a {
   text-decoration: none;
   background-color: rgb(102, 36, 0);
   color: rgb(255, 255, 255);
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
   border-radius: 10px;
   font-size: 1rem;
   letter-spacing: 4px;
@@ -142,12 +132,12 @@ main #info_personalizada a {
   text-decoration: none;
   background-color: rgb(102, 36, 0);
   color: rgb(255, 255, 255);
-  padding: 8px 24px 8px 24px;
+  padding: 8px 24px;
   border-radius: 8px;
   font-size: 1rem;
   letter-spacing: 4px;
   font-weight: 200;
-  margin: 20px 20px 20px 40px;
+  margin: 20px 40px;
 }
 main #info_personalizada a:hover {
   transition: 0.2s;
@@ -166,17 +156,8 @@ main #info_personalizada h4 {
   font-size: 1.5rem;
   font-weight: 500;
 }
-main #info_personalizada h5 {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin: 10px 20px 10px 20px;
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-main #info_personalizada p {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin: 10px 20px 10px 20px;
+main #info_personalizada h5, main #info_personalizada p {
+  margin: 10px 20px;
   font-size: 1.2rem;
   font-weight: 400;
 }
@@ -192,8 +173,7 @@ main .imagen-con-marco2 img {
 }
 main .imagen-con-marco2 h5 {
   text-align: center;
-  margin-top: 12px;
-  margin-bottom: 10px;
+  margin: 12px 0;
   letter-spacing: 8px;
   font-size: 1rem;
 }
@@ -203,7 +183,7 @@ main .imagen-con-marco2 a {
   text-decoration: none;
   background-color: rgb(102, 36, 0);
   color: rgb(255, 255, 255);
-  padding: 9px 18px 9px 18px;
+  padding: 9px 18px;
   border-radius: 10px;
   font-size: 0.8rem;
   letter-spacing: 3px;
@@ -239,7 +219,7 @@ main .imagen-con-marco3 a {
   text-decoration: none;
   background-color: rgb(102, 36, 0);
   color: rgb(255, 255, 255);
-  padding: 8px 16px 8px 16px;
+  padding: 8px 16px;
   border-radius: 8px;
   font-size: 0.7rem;
   letter-spacing: 3px;
@@ -275,8 +255,7 @@ main #imagen_inferior h2 {
   letter-spacing: 1px;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.4), 1px -1px 0 rgba(0, 0, 0, 0.4), -1px 1px 0 rgba(0, 0, 0, 0.4), 1px 1px 0 rgba(0, 0, 0, 0.4);
 }
-
-.imagen_con_marco4 {
+main .imagen_con_marco4 {
   border: solid 1px rgba(102, 36, 0, 0.3);
   background-color: rgb(255, 255, 255);
   position: relative;
@@ -284,12 +263,12 @@ main #imagen_inferior h2 {
   justify-content: center;
   height: 400px;
 }
-.imagen_con_marco4 img {
+main .imagen_con_marco4 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.imagen_con_marco4 h2 {
+main .imagen_con_marco4 h2 {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -302,7 +281,7 @@ main #imagen_inferior h2 {
   padding: 12px 24px;
   letter-spacing: 4px;
 }
-.imagen_con_marco4 a {
+main .imagen_con_marco4 a {
   position: absolute;
   justify-content: center;
   align-items: center;
@@ -319,9 +298,57 @@ main #imagen_inferior h2 {
   letter-spacing: 4px;
   font-weight: 400;
 }
-.imagen_con_marco4 a:hover {
+main .imagen_con_marco4 a:hover {
   transition: 0.2s;
   box-shadow: 0 0 0 0.25rem rgb(255, 255, 255);
+}
+
+footer {
+  background-color: rgb(255, 255, 255);
+}
+footer #mapa_google {
+  width: 100%;
+  height: 500px;
+}
+footer iframe {
+  width: 100%;
+  height: auto;
+}
+footer nav {
+  display: inline-block;
+}
+footer nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer nav img {
+  display: inline-block;
+  width: 24px;
+  height: auto;
+}
+footer nav p {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+footer nav h5 {
+  margin: 0;
+}
+footer #foot_color {
+  background-color: rgb(102, 36, 0);
+  color: rgb(255, 255, 255);
+}
+footer #foot_color p {
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+.btn-brown {
+  background-color: rgb(102, 36, 0);
+  color: white;
+  border: 2px solid rgb(102, 36, 0);
+  padding: 0.5rem 1rem;
 }
 
 .filtros_seleccionados h6 {
@@ -362,38 +389,37 @@ main #imagen_inferior h2 {
   box-shadow: 0 0 0 0.25rem rgba(102, 36, 0, 0.427);
 }
 
-#propiedades_venta h4 {
+#propiedades_venta h4, #propiedades_alquiler h4 {
   color: rgb(102, 36, 0);
   letter-spacing: 3px;
   padding-inline: 8px;
   font-size: 1.5rem;
   font-weight: 500;
 }
-#propiedades_venta h5 {
+#propiedades_venta h5, #propiedades_alquiler h5 {
   display: inline-block;
 }
-
-.imagen-con-marco4 {
+#propiedades_venta .imagen-con-marco4, #propiedades_alquiler .imagen-con-marco4 {
   display: block;
   padding: 8px;
   border: solid 1px rgba(102, 36, 0, 0.3);
   background-color: rgb(255, 255, 255);
 }
-.imagen-con-marco4 img {
+#propiedades_venta .imagen-con-marco4 img, #propiedades_alquiler .imagen-con-marco4 img {
   width: 100%;
   height: 160px;
   object-fit: cover;
 }
-.imagen-con-marco4 h5 {
+#propiedades_venta .imagen-con-marco4 h5, #propiedades_alquiler .imagen-con-marco4 h5 {
   font-weight: 600;
   letter-spacing: 1px;
 }
-.imagen-con-marco4 p {
+#propiedades_venta .imagen-con-marco4 p, #propiedades_alquiler .imagen-con-marco4 p {
   font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 6px;
 }
-.imagen-con-marco4 a {
+#propiedades_venta .imagen-con-marco4 a, #propiedades_alquiler .imagen-con-marco4 a {
   align-items: center;
   margin-top: 30px;
   display: inline-block;
@@ -409,18 +435,30 @@ main #imagen_inferior h2 {
   font-weight: 600;
   width: 100%;
 }
-.imagen-con-marco4 a:hover {
+#propiedades_venta .imagen-con-marco4 a:hover, #propiedades_alquiler .imagen-con-marco4 a:hover {
   transition: 0.2s;
   box-shadow: 0 0 0 0.25rem rgb(102, 36, 0);
 }
 
-#propiedades_alquiler h4 {
-  color: rgb(102, 36, 0);
-  letter-spacing: 3px;
-  padding-inline: 8px;
-  font-size: 1.5rem;
-  font-weight: 500;
-  display: inline-block;
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 300px;
+  right: 20px;
+  background-color: rgba(84, 138, 91, 0.3411764706);
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+.whatsapp-float:hover {
+  transform: scale(1.8);
+}
+.whatsapp-float img {
+  width: 70%;
+  margin-top: 15%;
 }
 
 #nosotros h4 {
@@ -464,7 +502,7 @@ main #imagen_inferior h2 {
 #staff .fundadores figure {
   grid-area: figura;
 }
-#staff .fundadores img {
+#staff .fundadores figure img {
   width: 100px;
   height: 100px;
 }
@@ -507,25 +545,24 @@ main #imagen_inferior h2 {
   color: rgb(102, 36, 0);
   margin: 10px 10px 20px 20px;
 }
-
-.mi-formulario {
+#formulario_contacto .mi-formulario {
   border: 1px solid rgb(102, 36, 0);
 }
-.mi-formulario .form-control {
+#formulario_contacto .mi-formulario .form-control {
   border: 1px solid rgba(102, 36, 0, 0.3);
   height: 40px;
   width: 100%;
   border-radius: 8px;
   margin-top: 4px;
 }
-.mi-formulario #consulta {
+#formulario_contacto .mi-formulario #consulta {
   width: 100%;
   height: 160px;
   border: 1px solid rgba(102, 36, 0, 0.3);
   resize: none;
   border-radius: 8px;
 }
-.mi-formulario #boton_formulario {
+#formulario_contacto .mi-formulario #boton_formulario {
   padding: 8px 28px;
   color: rgb(255, 255, 255);
   background-color: rgb(102, 36, 0);
@@ -535,92 +572,11 @@ main #imagen_inferior h2 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.mi-formulario #boton_formulario:hover {
+#formulario_contacto .mi-formulario #boton_formulario:hover {
   transition: 0.2s;
   box-shadow: 0 0 0 0.25rem rgb(102, 36, 0);
   font-weight: 600;
   letter-spacing: 5px;
 }
 
-#logo_casita {
-  width: 80px;
-  height: auto;
-}
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 300px;
-  right: 20px;
-  background-color: #548a5b57;
-  
-  border-radius: 50%;
-  text-align: center;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  transition: transform 0.3s ease-in-out;
-}
-
-.whatsapp-float img {
-  width: 70%;
-  margin-top: 15%;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.8);
-}
-/*estilo footer*/
-
-footer {
-  background-color: rgb(255, 255, 255);
-}
-footer #mapa_google {
-  width: 100%;
-  height: 500px;
-}
-footer iframe {
-  width: 100%;
-  height: auto;
-}
-footer nav {
-  display: inline-block;
-}
-footer nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-footer nav img {
-  display: inline-block;
-  width: 24px;
-  height: auto;
-}
-footer nav p {
-  display: inline-block;
-  font-size: 0.8rem;
-  margin-bottom: 8px;
-}
-footer nav h5 {
-  margin: 0;
-}
-footer #foot_color {
-  background-color: rgb(102, 36, 0);
-  color: white;
-}
-footer #foot_color p {
-  letter-spacing: 1px;
-  margin-bottom: 0px;
-}
-
-
-.btn-brown {
-  background-color: rgb(102, 36, 0);
-  color: white;
-  border: 2px solid rgb(102, 36, 0);
-  padding: 0.5rem 1rem;
-}
-
-/* Clase para agregar espacio entre los elementos */
-.me-2 {
-  margin-right: 0.5rem;
-}
+/*# sourceMappingURL=styles.css.map */
