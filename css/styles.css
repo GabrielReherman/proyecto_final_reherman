@@ -580,3 +580,27 @@ footer #foot_color p {
 }
 
 /*# sourceMappingURL=styles.css.map */
+
+
+/*error 404*/
+h1 {
+  font-size: 48px;
+  color: #cc0000;
+}
+p {
+  font-size: 18px;
+}
+.button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #555;
+}
