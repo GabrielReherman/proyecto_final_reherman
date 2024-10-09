@@ -353,7 +353,7 @@ footer #foot_color p {
 #datos_contacto,
 #menu_footer {
   flex: 1;
-  color: brown;
+  color:  rgb(102, 36, 0);;
 }
 
 #mapa iframe {
@@ -626,7 +626,7 @@ footer #foot_color p {
 /*error 404*/
 h1 {
   font-size: 48px;
-  color: #cc0000;
+  color: rgb(102, 36, 0);
 }
 p {
   font-size: 18px;
